@@ -7,7 +7,7 @@ set name=@iamb9
 
 
 
-::========================================================================================================================================
+::=================================================================================================================================
 
 :: Re-launch the script with x64 process if it was initiated by x86 process on x64 bit Windows
 :: or with ARM64 process if it was initiated by x86/ARM32 process on ARM64 Windows
@@ -71,7 +71,7 @@ if defined Silent call :begin %nul% & exit /b
 
 :begin
 
-::========================================================================================================================================
+::==========================================================================================================================
 
 if not exist "%_psc%" (
 %nceline%
@@ -105,8 +105,7 @@ for /f "tokens=2*" %%a in ('reg query "HKCU\Software\DownloadManager" /v ExePath
 
 setlocal EnableDelayedExpansion
 
-::========================================================================================================================================
-
+::======================================================================================================================
 ::  Elevate script as admin and pass arguments and preventing loop
 ::  Thanks to @abbodi1406 for the powershell method and solving special characters issue in file path name.
 
